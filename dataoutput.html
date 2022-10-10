@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different data display</title>
+</head>
+
+<body>
+    <h2>Hi, This is heading</h2>
+    <p id="data-demo"></p>
+    <button onclick='myfunction("")'>Click Me</button>
+    <button onclick='myfunction2("")'>Click Me</button>
+    <script>
+        // document.getElementById("demo").innerHTML=4+5 ;
+        //document.getElementById("data-demo").innerHTML=4+5;
+        function myfunction() {
+            var a, b, c
+            a = 5;
+            b = 6;
+            c = a + b;
+            console.log("The sum is ", c, a, b);
+            document.getElementById("data-demo").innerHTML = " First number is " + a + "</br> Second number is " + b + "</br>  Sum is " + c;
+        }
+        function add(a, b) {
+            return a + b;
+        }
+        function myfunction2() {
+            var x, y, z
+            x = 10;
+            y = 20;
+            z = x + y;
+            console.log("The sum is ", z, x, y);
+            document.getElementById("data-demo").innerHTML = " First number is " + x + "</br> Second number is " + y + "</br>  Sum is " + z;
+        }
+            function add(x, y) {
+            return x + y;
+        }
+    </script>
+</body>
+
+</html>

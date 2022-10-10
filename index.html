@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript examples</title>
+    
+
+</head>
+<body>
+    <div>
+        Hi
+    </div>
+    <!--div id="example"></div>-->
+        <p id="p-font">
+            Hi changing font size via Javascript
+        </p>
+    <button onclick="document.querySelector('#p-font').style.backgroundColor='red'">
+        Change font
+    </button>
+    <button onclick="document.querySelector('#img').style.display='none'">
+       Remove bulb
+    </button>
+    <button onclick="document.querySelector('#img').style.display='inline'">
+        Show bulb
+    </button>
+    <button onclick='document.querySelector("#img").src="pic_bulbon.gif"'>ON</button>
+    
+    <img id="img" src="bulb.gif"/>
+
+    <button onclick='document.querySelector("#img").src="bulb.gif"''>OFF</button>
+    <!--button 
+    style="border: 1px solid red;"
+    onclick='document.getElementById("example").innerHTML="From Javascript ID"''>
+    Click me
+    </button>-->
+</body>
+</html>
