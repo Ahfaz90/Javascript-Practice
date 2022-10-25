@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in HTML</title>
+    <script>
+        function displayObject() {
+            const person = {
+                firstName: "Ahfaz",
+                lastName: "Khan",
+                Age: 30,
+                fullName: function () {
+                    return this.firstName + " " + this.lastName
+                }
+            }
+            document.getElementById("objId").innerHTML = "Name: " + person.fullName() + "<br/>"
+              + " Age : " + person.Age
+        }
+        function onTexBoxValueChange(){
+            console.log("On change event called");
+            document.getElementById("objId").innerHTML = document.getElementById("name").value
+        }
+        function onTexBoxKeyPressed(){
+            console.log("Key Pressed event called");
+            document.getElementById("objId").innerHTML = document.getElementById("name").value
+        }
+    </script>
+</head>
+
+<body>
+    <p id="objId"></p>
+    <input id="name" type="text" onkeypress="onTexBoxKeyPressed()" onchange="onTexBoxValueChange()" placeholder="Enter Your Name"/> 
+    <button onclick="displayObject()">Show Object</button>
+</body>
+
+</html>

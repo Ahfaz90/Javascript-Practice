@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+<body>
+    <p id="demlo-operators">
+
+    </p>
+    <script>
+        let i=0
+        i++ //i=i+1
+        console.log("value of i is",i);
+        i--; //i=i-1
+        console.log("value of i now after -- is",i)
+        let x = 19;
+        console.log("Modulus division by 2", x % 4);
+        let result = x % 4
+        x += 5 //x=x+5 ; x=19
+        console.log("value of x  after x += y",x)
+        x -= 7 // x=x-7
+        console.log("value of x  after x += y",x)
+        let txt1 = "Ahfaz"
+        let txt2 = "Khan"
+        let txt3 = txt1 + " " + txt2;
+        console.log("My name:::", txt3);
+        let text1 = "what a ";
+        text1 += "Nice day"; // text1 = text1 + niceday
+        console.log(text1);
+        //BODMAS- Bracket of Division, Multiplication,Addition, Substraction
+        let z = (100 + 5) * 50;
+        console.log("z value:: ",z);
+
+        //! not operator
+        // == comparison returs either true or false -- i.e. it returns boolean
+
+        let p=3 
+        let q=3
+        let r= !(p==q)
+        console.log("value of r ", r);
+        //== equal n === equal
+        const p1 = "7"
+        console.log("value p1::", p1);
+        const q1 = 7
+        console.log("value of q1 ::", q1);
+        const r1 = (p1===q1)
+        console.log("value of r1", r1);
+        console.log("Less than operator q1 < p1", (q1 < p1 ));
+        console.log("Greater than operator q1 >= p1", (q1 >= p1 ));
+
+        //Bitwise operator & - And
+        let a = 1; //0001
+        let b = 0; //1101 -13
+        let c = a & b;
+        console.log("value of c ", c)
+
+        // ?? coalese / nullish operator
+        // the ?? operator returns the firstargument if it null or undefined
+        // otherwise it returns the second
+        let name = null;
+        let text = "missing";
+        let output = name ?? text;
+
+        console.log("The name is ", output )
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+    <script>
+        // user inputs age of a person, you should display
+        // that he can vote or not vote
+        function checkMyEligibility() {
+            //block of code
+            let ageElement = document.getElementById("ageId");
+            let messageElement = document.getElementById("message");
+            // messageElement.style.backgroundColor="red"
+            messageElement.style.border = " blu solid 2px"
+            messageElement.innerHTML = ageElement.value > 170 ? "invalid input" :
+
+                messageElement.innerHTML = ageElement.value >= 18
+                    ? "you can vote" : "Too Young"
+            messageElement.style.backgroundColor = ageElement.value >= 18
+                ? "green" : "red";
+
+        }
+
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+        function btnConvertToCelsius() {
+            let temElement = document.getElementById("temId")
+            document.getElementById("demo").innerHTML = toCelsius(temElement.value);
+        }
+
+
+        function localVariableFunction() {
+            let carName = "Volvo"
+            let carModel = 800
+            let caeWeight = 167
+            let car = {
+                name: "Volvo",
+                model:800,
+                weight: 167,
+                Color: "red"
+            };
+
+            console.log("car name", car.name );
+            console.log("car model", car.model );
+            console.log("car weight", car.weight);
+
+
+        }
+
+        localVariableFunction()
+    // code here canot use car variable function
+    // console.log(carName);
+    </script>
+</head>
+
+<body>
+
+    <input id="ageId" type="number" placeholder="Enter your Age." />
+    <button onclick="checkMyEligibility()">Vote</button>
+    <p id="message"></p>
+
+    <input id="temId" type="number" placeholder="Enter your Temperature in fahrenheit." />
+    <button onclick="btnConvertToCelsius()">Convert to degree to Celsius</butto>
+        <p id="demo"></p>
+</body>
+
+</html>

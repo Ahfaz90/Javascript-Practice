@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <script>
+        function sliceTextBoxValue() {
+            let txt1Value = document.getElementById("txt1").value
+            // // slice -3 will return the last 3 character of the string
+            //  end logic for substring. note - subtring will treat value less than 0 as 0
+
+            // substr() similar to slice--
+            // diffference is second parameter/argument is the length of extracted part
+            document.getElementById("display1").innerHTML =
+                txt1Value.length > 5 ? txt1Value.substr(0, 3) : "Enter More than 5 characters"
+        }
+        let text = "please visit Microsoft and Microsoft!!";
+        let newText = text.replace(/Microsoft/g, "Azhar Academy");
+        // g is a regular expression
+        console.log("After replace::", newText);
+        // string method to UpperCase()
+        //let text1 = "hello world" ;
+        //let text2 = text1.toUpperCase();
+
+        //console.log(text2);
+        let text1 = "hello"
+        let text2 = "world"
+        let text3 = text1.concat(" ", text2," ", "from Azhar Academy")
+        console.log(text3);
+
+        let numb = 5;
+        // to convert a number into string we use .toString()
+        let text5 = numb.toString();
+        //padstart method adds the string in the start of the text/string
+        let padded = text5.padStart(4, "0");
+        console.log("After Padding start::",padded)
+
+        let text6 = "HELLO";
+        let char1 = text6.charAt(4);
+        console.log("Characer at index position 4 is ",text6[0], text6[1], text6[2], text6[3]);
+
+        let text7 = "Hi|Hello|World"
+        let text7Array = text7.split('|');
+        console.log("Converted array is ", text7Array, typeof text7, typeof text7Array);
+
+        let text8 = "a, b, c, d, e, f"
+        let text8Array= text8.split(',')
+        console.log("Converted array is " ,text8Array, typeof text8, typeof text8Array);
+
+    </script>
+</head>
+  
+<body>
+    <input id="txt1" type="text" placeholder="Enter Name" />
+    <button onclick="sliceTextBoxValue()">Slice</button>
+    <p id="display1"></p>
+</body>
+
+</html>

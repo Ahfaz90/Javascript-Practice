@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof</title>
+    
+        
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // x is a string
+        let x = "John";
+        let str = "Apple, Banana, Kiwi";
+        console.log(str.length);
+        let strB = str.slice(7,13)
+        let strC = str.slice(15,19)
+        console.log(strB,strC);
+        
+        
+        // y is an object
+        let y = new String("John");
+        let n = (x === y);
+        console.log("Value of N is", n)
+        let z = 456;
+
+        let q = null;
+        let r = undefined;
+        
+        document.getElementById("demo").innerHTML =
+        typeof x + "<br>" + typeof y + "<br>" + typeof z + "<br>" + typeof q +"<br>" + typeof r +"<br>" + typeof n;
+        </script>
+</body>
+</html>

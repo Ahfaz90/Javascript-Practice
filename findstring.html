@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index of example</title>
+</head>
+<script>
+    function getSearchStringPosition(){
+        let pElementData = document.getElementById("pId").innerText;
+        let inputTxtValue = document.getElementById("InputId").value;
+        let matchResult=pElementData.match(/ian/gi);
+        console.log("Match result", matchResult);
+        document.getElementById("demo").innerHTML = pElementData.match(/ian/gi);
+    }
+</script>
+<body>
+    <input id="inputId" placeholder="Enter the text to search"/>
+    <button onclick="getSearchStringPosition()">Click me</button>
+    <p id="demo"></p>
+    <p id="pId">Please locate where 'locate' occurs! The rain in SPAIN stays mainly in the plain</p>
+    
+</body>
+</html>
